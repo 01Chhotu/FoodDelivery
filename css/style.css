@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --navbar-higt: 59px;
+}
+/* navbar  */
+#navbar{
+    display: flex;
+    align-items: center;
+}
+#logo{
+  margin: 10px 5px;
+}
+#logo img{
+    margin: 10px 5px;
+    height: 45px;
+}
+#navbar{
+    position: relative;
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo 2', cursive;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+ }
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    display: block;
+    text-decoration: none;
+    padding: 4px 20px;
+    border-radius: 10px;
+    color: wheat;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+/* home section */
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    padding: 3px 20px;
+    justify-content: center;
+    align-items: center;
+   
+}
+#home::before{
+    content: "";
+    background: url('../img.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+ /* utility class */
+ .h-primary{
+     font-size: 3rem;
+     padding: 22px;
+ }
+#home p{
+     text-align: center;
+     font-size: 1rem;
+     margin: 5px 233px;
+     font-family: 'Baloo Tamma 2', cursive;
+ }
+ .btn{
+     padding: 5px 22px;
+     border: 2px solid white;
+     background: brown;
+     font-size: 1.2rem;
+     border-radius: 10px;
+     cursor: pointer;
+ }
