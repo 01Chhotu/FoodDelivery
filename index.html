@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Tamma+2:wght@500&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <nav id="navbar">
         <div id="logo">
-            <img src="loGo (2).png" alt="">
+            <img src="logo.jpg" alt="">
         </div>
         <ul>
            <li class="item"><a href="#">Home</a></li>
@@ -27,5 +28,37 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dicta. Deleniti illo hic alias iure aliquam placeat cum exercitationem facilis, ipsam numquam assumenda voluptates libero expedita ad amet explicabo molestiae?</p>
     <button class="btn">Order Now</button>
   </section>
+  <div class="w3-bar">
+    <button class="w3-button w3-left w3-light-grey" id="prevButton">&laquo; Previous</button>
+    <button class="w3-button w3-right w3-green" id="nextButton">Next &raquo;</button>
+  </div>
+  </div>
 </body>
+<script>
+    const images = [
+        'url1.jpg',
+        'url2.jpg',
+        'url3.jpg',
+        'url4.jpg',
+        'url5.jpg',
+        'url6.jpg',
+        'url7.jpg',
+        'url8.jpg',
+        'url9.jpg',
+        'url10.jpg'
+    ];
+    let currentIndex = 0;
+    function updateBackgroundImage() {
+        document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+    }
+    document.getElementById('prevButton').addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+        updateBackgroundImage();
+    });
+    document.getElementById('nextButton').addEventListener('click', () => {
+        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+        updateBackgroundImage();
+    });
+    updateBackgroundImage();
+</script>
 </html>
