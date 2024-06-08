@@ -93,8 +93,17 @@
 }
 .w3-bar {
     position: fixed;
-    bottom: 10px;
+    bottom: 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
